@@ -18,7 +18,7 @@
     "autoload": {
         "psr-4": {
             "http\\" : "http",
-            "validator\\" : "validator",
+            "validator\\" : "validator"
 			
         }
     },
