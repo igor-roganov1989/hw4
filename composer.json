@@ -18,9 +18,7 @@
     "version":"1.1",
     "autoload": {
         "psr-4": {
-            "http\\" : "http",
-            "validator\\" : "validator"
-			
+            "App\\" : "src"			
         }
     },
     "require-dev": {
