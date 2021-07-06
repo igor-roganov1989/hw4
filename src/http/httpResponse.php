@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace http;
+namespace App\http;
 class httpResponse
 {
     protected int $status = 0;

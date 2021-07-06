@@ -1,10 +1,10 @@
 <?php
 
-namespace http;
+namespace App\http;
 
 
-use validator\Validator;
-use http\httpRequest;
+use App\validator\Validator;
+use App\http\httpRequest;
 
 class handlerRequest
 {

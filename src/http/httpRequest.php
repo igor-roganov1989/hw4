@@ -1,9 +1,9 @@
 <?php
 
 
-namespace http;
+namespace App\http;
 
-use http\handlerRequest;
+use App\http\handlerRequest;
 
 
 class httpRequest
