@@ -1,10 +1,10 @@
 <?php
 namespace App;
 
-use validator\validator;
-use http\httpRequest;
-use http\handlerRequest;
-use http\httpResponse;
+use App\validator\validator;
+use App\http\httpRequest;
+use App\http\handlerRequest;
+use App\http\httpResponse;
 
 //use Exception;
 
