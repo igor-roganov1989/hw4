@@ -8,7 +8,7 @@ use App\http\httpResponse;
 
 //use Exception;
 
-class app
+class App
 {
     protected $objRequest = null;
     protected $objValidate = null;
