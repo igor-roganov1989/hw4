@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\http;
-
 use App\http\handlerRequest;
 
 class httpRequest

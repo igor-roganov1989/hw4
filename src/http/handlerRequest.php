@@ -1,5 +1,4 @@
 <?php
-
 namespace App\http;
 use App\validator\Validator;
 use App\http\httpRequest;

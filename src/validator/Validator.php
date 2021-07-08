@@ -15,11 +15,9 @@ class Validator
             } elseif ($char == ")") {
                 $counter--;
             } else {
-
                 throw new \Exception('Передан неверный символ');
             }
         }
         return $counter === 0;
     }
-
 }

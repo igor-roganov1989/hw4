@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 namespace App\http;
 
 class httpResponse
@@ -26,10 +24,8 @@ class httpResponse
     }
 
     public function setHeaders(array $headers){
-
         $this->headers = $headers;
         return $this;
-
     }
 
     public function getHeaders():array {
