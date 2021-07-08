@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 namespace App\http;
+
 class httpResponse
 {
     protected int $status = 0;
@@ -9,18 +10,13 @@ class httpResponse
 
     public function __construct( $status , $headers )
     {
-
         $this->status = $status;
         $this->headers = $headers;
-
     }
-
-
 
     public function setStatus(int $status): self
     {
         $this->status = $status;
-
         return $this;
     }
 
@@ -34,13 +30,9 @@ class httpResponse
         $this->headers = $headers;
         return $this;
 
-
     }
-
 
     public function getHeaders():array {
         return $this->headers;
-
     }
-
 }

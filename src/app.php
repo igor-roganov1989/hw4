@@ -1,50 +1,37 @@
 <?php
 namespace App;
-
 use App\validator\validator;
 use App\http\httpRequest;
 use App\http\handlerRequest;
 use App\http\httpResponse;
-
-//use Exception;
-
 class App
 {
     protected $objRequest = null;
     protected $objValidate = null;
     protected $objHandler = null;
 
-
-
     function __construct()
     {
         $this->objRequest = new httpRequest();
         $this->objValidate = new Validator();
         $this->objHandler = new handlerRequest();
-
     }
-
 
     public function run(){
+        try {
+            $response = $this->objHandler->handle($this->objRequest);
 
+            foreach ($response->getHeaders() as $name=>$value) {
+                \header("$name:$value");
 
-        $response =  $this->objHandler->handle($this->objRequest);
+            }
 
+            \http_response_code($response->getStatus());
 
-
-        foreach ($response->getHeaders() as $name=>$value) {
-            \header("$name:$value");
-
+        }catch (\Exception $e ){
+            \header("400:invalid chars");
+            \http_response_code(400);
         }
 
-        \http_response_code($response->getStatus());
-
-
-
-
     }
-
-
-
-
 }
